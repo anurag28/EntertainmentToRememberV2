@@ -1,0 +1,80 @@
+﻿<Page x:Class="EntertainmentToRememberV2.Pages.SearchSongPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EntertainmentToRememberV2.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="SearchSongPage">
+
+    <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="Margin" Value="10"/>
+                    <Setter Property="Width" Value="150"/>
+                    <Setter Property="Height" Value="40"/>
+                    <Setter Property="FontFamily" Value="Bradley Hand ITC"/>
+                    <Setter Property="FontWeight" Value="ExtraBold"/>
+                    <Setter Property="FontStyle" Value="Oblique"/>
+                    <Setter Property="Foreground" Value="Beige"/>
+                    <Setter Property="FontSize" Value="16"/>
+                </Style>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="10"/>
+                    <Setter Property="Height" Value="40"/>
+                    <Setter Property="Width" Value="100"/>
+                    <Setter Property="FontFamily" Value="Bradley Hand ITC"/>
+                    <Setter Property="FontWeight" Value="ExtraBold"/>
+                    <Setter Property="FontStyle" Value="Oblique"/>
+                    <Setter Property="Foreground" Value="DarkBlue"/>
+                    <Setter Property="Background" Value="Beige"/>
+                    <Setter Property="FontSize" Value="14"/>
+                </Style>
+            </Grid.Resources>
+            <Grid.Background>
+                <ImageBrush Stretch="Fill" ImageSource="..\Images\backgroundHome4.jpg" AlignmentX="Center" AlignmentY="Top"/>
+            </Grid.Background>
+            <Label x:Name="lblInfo" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Width="Auto" Content="Search by title, singer or genre..." Foreground="Beige" FontSize="16"/>
+            <Label x:Name="lblTitle" Content="Song Title" Grid.Row="1" Grid.Column="0"></Label>
+            <Label x:Name="lblSinger" Content="Singer" Grid.Row="2" Grid.Column="0"></Label>
+            <Label x:Name="lblGenre" Content="Genre" Grid.Row="3" Grid.Column="0"></Label>
+            <TextBox x:Name="txtTitle" Grid.Row="1" Grid.Column="1" Margin="10" Height="40" Width="250"/>
+            <TextBox x:Name="txtSinger" Grid.Row="2" Grid.Column="1" Margin="10" Height="40" Width="250"/>
+            <ComboBox x:Name="cmbGenre" Grid.Row="3" Grid.Column="1" Margin="10" Height="40" Width="150" FontFamily="Bradley Hand ITC" FontSize="16" FontStyle="Oblique">
+            <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Rock</ComboBoxItem>
+            <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Romantic</ComboBoxItem>
+            <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Trance</ComboBoxItem>
+                <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Rap</ComboBoxItem>
+            <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Pop</ComboBoxItem>
+            </ComboBox>
+            <Button x:Name="btnSearch" Grid.Row="4" Grid.Column="0"  Content="Search" Click="btnSearch_Click"/>
+            <Button x:Name="btnHome" Grid.Row="4" Grid.Column="1"  Content="Home" Click="btnHome_Click"/>
+            <DataGrid x:Name="grdDisplaySongs"
+                  Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3"
+                  Grid.RowSpan="4" Margin="20" AutoGenerateColumns="False" FontWeight="ExtraBold"
+                  FontFamily="Bradley Hand ITC" Foreground="DarkBlue" FontSize="16" Background="Transparent" BorderBrush="Transparent">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*" FontWeight="ExtraBold"/>
+                    <DataGridTextColumn Header="Singer" Binding="{Binding Singer}" Width="*" FontWeight="ExtraBold"/>
+                    <DataGridTextColumn Header="Genre" Binding="{Binding Genre}" Width="*" FontWeight="ExtraBold"/>
+                    <DataGridTextColumn Header="Year" Binding="{Binding Year}" Width="*" FontWeight="ExtraBold"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+</Page>

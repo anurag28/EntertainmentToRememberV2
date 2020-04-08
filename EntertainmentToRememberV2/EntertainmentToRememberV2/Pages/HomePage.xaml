@@ -1,0 +1,47 @@
+﻿<Page x:Class="EntertainmentToRememberV2.Pages.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EntertainmentToRememberV2.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="HomePage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Height" Value="40"/>
+                <Setter Property="Width" Value="150"/>
+                <Setter Property="FontFamily" Value="Bradley Hand ITC"/>
+                <Setter Property="FontWeight" Value="ExtraBold"/>
+                <Setter Property="FontStyle" Value="Oblique"/>
+                <Setter Property="Foreground" Value="DarkBlue"/>
+                <Setter Property="Background" Value="Beige"/>
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="..\Images\backgroundHome4.jpg" AlignmentX="Center" AlignmentY="Top"/>
+        </Grid.Background>
+        <Label Name="lblIntro" Content="ADD SOME INTRODUCTION HERE" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Height="60" Width="650" FontSize="40" Foreground="Beige"/>
+        <Button x:Name="btnMovies" Content="MOVIES" Grid.Row="1" Grid.Column="0" Click="btnMovies_Click"></Button>
+        <Button x:Name="btnSongs" Content="SONGS" Grid.Row="1" Grid.Column="1" Click="btnSongs_Click"></Button>
+        <Button x:Name="btnShows" Content="TV SHOWS" Grid.Row="1" Grid.Column="2" Click="btnShows_Click"></Button>
+        <Label Name="lblMovieIntro" Content="ADD MOVIE INTRO" Grid.Row="2" Grid.Column="0" FontSize="20" Foreground="Beige" HorizontalAlignment="Center"/>
+        <Label Name="lblSongsIntro" Content="ADD SONGS INTRO" Grid.Row="2" Grid.Column="1" FontSize="20" Foreground="Beige" HorizontalAlignment="Center"/>
+        <Label Name="lblShowsIntro" Content="ADD SHOWS INTRO" Grid.Row="2" Grid.Column="2" FontSize="20" Foreground="Beige" HorizontalAlignment="Center"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SongList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Songs>
+    <Song xsi:type="RockSong">
+      <Title>high on life</Title>
+      <Singer>martin garrix</Singer>
+      <Genre>Rock</Genre>
+      <Year>2012</Year>
+    </Song>
+  </Songs>
+</SongList>

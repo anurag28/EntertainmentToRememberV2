@@ -37,8 +37,10 @@ namespace EntertainmentToRememberV2.Pages
         {
             InitializeComponent();
             enterMovies = new List<Movie>();
-            ReadFromFileMoviesAndAddToCurrentList();
-            
+            if (File.Exists("movies.xml"))
+            {
+                ReadFromFileMoviesAndAddToCurrentList();
+            }            
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -46,22 +48,23 @@ namespace EntertainmentToRememberV2.Pages
 
             Movie newMovie = new Movie();
 
+
             switch (cmbGenre.SelectedIndex)
             {
-                case 0:
-                    newMovie = new ActionMovie(txtName.Text, txtCast.Text, "Action", this.cmbRating.SelectionBoxItem.ToString());
-                    break;
                 case 1:
-                    newMovie = new DramaMovie(txtName.Text, txtCast.Text, "Drama", this.cmbRating.SelectionBoxItem.ToString());
+                    newMovie = new Movie(txtName.Text, txtCast.Text, "Action", this.cmbRating.SelectionBoxItem.ToString());
                     break;
                 case 2:
-                    newMovie = new ThrillerMovie(txtName.Text, txtCast.Text, "Thriller", this.cmbRating.SelectionBoxItem.ToString());
+                    newMovie = new Movie(txtName.Text, txtCast.Text, "Drama", this.cmbRating.SelectionBoxItem.ToString());
                     break;
                 case 3:
-                    newMovie = new RomanticMovie(txtName.Text, txtCast.Text, "Romantic", this.cmbRating.SelectionBoxItem.ToString());
+                    newMovie = new Movie(txtName.Text, txtCast.Text, "Thriller", this.cmbRating.SelectionBoxItem.ToString());
                     break;
                 case 4:
-                    newMovie = new ComedyMovie(txtName.Text, txtCast.Text, "Comedy", this.cmbRating.SelectionBoxItem.ToString());
+                    newMovie = new Movie(txtName.Text, txtCast.Text, "Romantic", this.cmbRating.SelectionBoxItem.ToString());
+                    break;
+                case 5:
+                    newMovie = new Movie(txtName.Text, txtCast.Text, "Comedy", this.cmbRating.SelectionBoxItem.ToString());
                     break;
                 default:
                     MessageBox.Show("Invalid Genre Selected!!", "ERROR");
@@ -88,8 +91,8 @@ namespace EntertainmentToRememberV2.Pages
         {
             txtName.Text = string.Empty;
             txtCast.Text = string.Empty;
-            cmbGenre.SelectedIndex = -1;
-            cmbRating.SelectedIndex = -1;
+            cmbGenre.SelectedIndex = 0;
+            cmbRating.SelectedIndex = 0;
 
         }
 

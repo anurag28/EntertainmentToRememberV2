@@ -6,11 +6,6 @@ using System.Xml.Serialization;
 namespace EntertainmentToRememberV2.Models
 {
     [XmlRoot("MovieList")]
-    [XmlInclude(typeof(ActionMovie))]
-    [XmlInclude(typeof(DramaMovie))]
-    [XmlInclude(typeof(ThrillerMovie))]
-    [XmlInclude(typeof(RomanticMovie))]
-    [XmlInclude(typeof(ComedyMovie))]
     public class MovieStoreList
     {
         private List<Movie> movieList = null;

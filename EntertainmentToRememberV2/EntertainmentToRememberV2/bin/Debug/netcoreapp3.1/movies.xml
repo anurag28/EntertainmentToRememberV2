@@ -1,94 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MovieList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Movies>
-    <Movie xsi:type="RomanticMovie">
+    <Movie>
       <Name>mjj</Name>
       <Cast>jbmn</Cast>
       <Genre>Romantic</Genre>
       <Rating>System.Windows.Controls.ComboBoxItem: 5</Rating>
     </Movie>
-    <Movie xsi:type="ActionMovie">
+    <Movie>
       <Name>mbmnbm</Name>
       <Cast>mnbnmb,hjg,h</Cast>
       <Genre>Action</Genre>
       <Rating>System.Windows.Controls.ComboBoxItem: 1</Rating>
     </Movie>
-    <Movie xsi:type="ThrillerMovie">
+    <Movie>
       <Name>bdsbmndbnmb</Name>
       <Cast>sjfbmn</Cast>
       <Genre>Thriller</Genre>
       <Rating>System.Windows.Controls.ComboBoxItem: 1</Rating>
     </Movie>
-    <Movie xsi:type="ThrillerMovie">
+    <Movie>
       <Name>mhghj</Name>
       <Cast>lllllllllllllllllllllllllllllll</Cast>
       <Genre>Thriller</Genre>
       <Rating>System.Windows.Controls.ComboBoxItem: 1</Rating>
     </Movie>
-    <Movie xsi:type="DramaMovie">
-      <Name>Wake up sid</Name>
-      <Cast>Ranbir Kapoor</Cast>
-      <Genre>Drama</Genre>
-      <Rating>5</Rating>
-    </Movie>
-    <Movie xsi:type="RomanticMovie">
-      <Name>Maanjhi</Name>
-      <Cast>Nawazuddin</Cast>
-      <Genre>Romantic</Genre>
-      <Rating>5</Rating>
-    </Movie>
-    <Movie xsi:type="ActionMovie">
-      <Name>king</Name>
-      <Cast>united</Cast>
-      <Genre>Action</Genre>
-      <Rating>4</Rating>
-    </Movie>
-    <Movie xsi:type="ActionMovie">
-      <Name>2012</Name>
-      <Cast>Tom Hanks</Cast>
-      <Genre>Action</Genre>
-      <Rating>4</Rating>
-    </Movie>
-    <Movie xsi:type="ActionMovie">
-      <Name>Avengers</Name>
-      <Cast>Tony Stark</Cast>
-      <Genre>Action</Genre>
-      <Rating>5</Rating>
-    </Movie>
-    <Movie xsi:type="ActionMovie">
-      <Name>End Game</Name>
-      <Cast>Scarlet Johanson</Cast>
-      <Genre>Action</Genre>
-      <Rating>4</Rating>
-    </Movie>
-    <Movie xsi:type="ActionMovie">
-      <Name>Thor</Name>
-      <Cast>Chris Hemsworth</Cast>
-      <Genre>Action</Genre>
-      <Rating>5</Rating>
-    </Movie>
-    <Movie xsi:type="ThrillerMovie">
-      <Name>inception</Name>
-      <Cast>leonardo</Cast>
-      <Genre>Thriller</Genre>
-      <Rating>4</Rating>
-    </Movie>
-    <Movie xsi:type="ActionMovie">
-      <Name>rangroop</Name>
-      <Cast>chriswa</Cast>
-      <Genre>Action</Genre>
-      <Rating>5</Rating>
-    </Movie>
-    <Movie xsi:type="ActionMovie">
-      <Name>sholay</Name>
-      <Cast>Amitabh, Dharam paaji</Cast>
-      <Genre>Action</Genre>
-      <Rating>5</Rating>
-    </Movie>
-    <Movie xsi:type="ThrillerMovie">
-      <Name>dfgfd</Name>
-      <Cast>vgnfg</Cast>
-      <Genre>Thriller</Genre>
+    <Movie>
+      <Name>new movie</Name>
+      <Cast>akshay</Cast>
+      <Genre>Comedy</Genre>
       <Rating>4</Rating>
     </Movie>
   </Movies>

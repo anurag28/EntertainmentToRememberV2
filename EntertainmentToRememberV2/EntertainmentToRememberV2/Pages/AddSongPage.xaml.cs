@@ -36,7 +36,10 @@ namespace EntertainmentToRememberV2.Pages
         {
             InitializeComponent();
             enterSong = new List<Song>();
-            ReadFromFileSongsAndAddToCurrentList();
+            if (File.Exists("songs.xml"))
+            {
+                ReadFromFileSongsAndAddToCurrentList();
+            }
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -45,25 +48,26 @@ namespace EntertainmentToRememberV2.Pages
 
             switch (cmbGenre.SelectedIndex)
             {
-                case 0:
-                    newSong = new RockSong(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
-                    break;
                 case 1:
-                    newSong = new RomanticSong(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
+                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
                     break;
                 case 2:
-                    newSong = new TranceSong(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
+                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
                     break;
                 case 3:
-                    newSong = new RapSong(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
+                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
                     break;
                 case 4:
-                    newSong = new PopSong(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
+                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
                     break;
                 case 5:
+                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
+                    break;
+                default:
                     MessageBox.Show("Invalid Genre Selected!!", "ERROR");
                     return;
             }
+
 
             EnterSong.Add(newSong);
             ClearForm();
@@ -84,7 +88,7 @@ namespace EntertainmentToRememberV2.Pages
         {
             txtTitle.Text = string.Empty;
             txtSinger.Text = string.Empty;
-            cmbGenre.SelectedIndex = -1;
+            cmbGenre.SelectedIndex = 0;
             txtYear.Text = "";
 
         }

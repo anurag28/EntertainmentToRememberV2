@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ShowList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Shows>
+    <Show>
+      <Name>TBBT</Name>
+      <Cast>Sheldon</Cast>
+      <Genre>Sitcom</Genre>
+      <Rating>Sitcom</Rating>
+    </Show>
+    <Show>
+      <Name>Money Heist</Name>
+      <Cast>Tokyo</Cast>
+      <Genre>Thriller</Genre>
+      <Rating>Thriller</Rating>
+    </Show>
+    <Show>
+      <Name>Friends</Name>
+      <Cast>Matt Le Blanc</Cast>
+      <Genre>Comedy</Genre>
+      <Rating>Comedy</Rating>
+    </Show>
+    <Show>
+      <Name>jksdahbfjbj</Name>
+      <Cast>kjdshf</Cast>
+      <Genre>Action</Genre>
+      <Rating>4</Rating>
+    </Show>
+  </Shows>
+</ShowList>

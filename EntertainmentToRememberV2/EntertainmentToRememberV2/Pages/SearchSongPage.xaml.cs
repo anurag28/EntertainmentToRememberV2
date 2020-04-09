@@ -72,7 +72,12 @@ namespace EntertainmentToRememberV2.Pages
 
             else if (txtTitle.Text == "" && txtSinger.Text != "" && cmbGenre.SelectedIndex != -1)
             {
-                SearchBySingerAndGenre(txtTitle.Text, this.cmbGenre.SelectionBoxItem.ToString());
+                SearchBySingerAndGenre(txtSinger.Text, this.cmbGenre.SelectionBoxItem.ToString());
+            }
+
+            else if (txtTitle.Text != "" && txtSinger.Text != "" && cmbGenre.SelectedIndex != -1)
+            {
+                SearchByTitleSIngerAndGenre(txtTitle.Text, txtSinger.Text, this.cmbGenre.SelectionBoxItem.ToString());
             }
 
             if (DisplaySongs.Count == 0)
@@ -171,6 +176,20 @@ namespace EntertainmentToRememberV2.Pages
                         && song.Genre.Contains(genre)
                         select song;
             foreach (Song song in query)
+            {
+                DisplaySongs.Add(song);
+            }
+        }
+
+        private void SearchByTitleSIngerAndGenre(string title, string singer, string genre)
+        {
+            var query = from song in songList.SongList
+                        where song.Title.Contains(title) &&
+                        song.Singer.Contains(singer) &&
+                        song.Genre.Contains(genre)
+                        select song;
+
+            foreach(Song song in query)
             {
                 DisplaySongs.Add(song);
             }

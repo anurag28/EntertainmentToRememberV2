@@ -61,14 +61,16 @@
         </TextBox>
         <TextBox x:Name="txtCast" Grid.Row="1" Grid.Column="1" Margin="10" Height="40" Width="250"/>
         <ComboBox x:Name="cmbGenre" Grid.Row="2" Grid.Column="1" Margin="10" Height="40" Width="250" FontFamily="Bradley Hand ITC" FontSize="16" FontStyle="Oblique">
+            <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center" IsSelected="True">Choose Movie Genre</ComboBoxItem>
             <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Action</ComboBoxItem>
             <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Drama</ComboBoxItem>
             <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Thriller</ComboBoxItem>
             <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Romantic</ComboBoxItem>
             <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Comedy</ComboBoxItem>
         </ComboBox>
-        <ComboBox x:Name="cmbRating" Grid.Row="3" Grid.Column="1" Margin="10" Height="40" Width="150" FontFamily="Bradley Hand ITC" FontSize="16" FontStyle="Oblique">
-            <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">1</ComboBoxItem>
+        <ComboBox x:Name="cmbRating" Grid.Row="3" Grid.Column="1" Margin="10" Height="40" Width="50" FontFamily="Bradley Hand ITC" FontSize="16" FontStyle="Oblique">
+            <!--<ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center" IsSelected="True">Choose Rating</ComboBoxItem>-->
+            <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center" Width="Auto" IsSelected="True">1</ComboBoxItem>
             <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">2</ComboBoxItem>
             <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">3</ComboBoxItem>
             <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">4</ComboBoxItem>

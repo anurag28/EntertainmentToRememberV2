@@ -12,7 +12,7 @@ namespace EntertainmentToRememberV2.Models
 
         [XmlArray("Shows")]
         [XmlArrayItem("Show")]
-        public List<Show> ShowList { get => showList; set => ShowList = value; }
+        public List<Show> ShowList { get => showList; set => showList = value; }
         public ShowStoreList()
         {
             ShowList = new List<Show>();

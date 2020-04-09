@@ -6,11 +6,6 @@ using System.Xml.Serialization;
 namespace EntertainmentToRememberV2.Models
 {
     [XmlRoot("SongList")]
-    [XmlInclude(typeof(RockSong))]
-    [XmlInclude(typeof(RomanticSong))]
-    [XmlInclude(typeof(TranceSong))]
-    [XmlInclude(typeof(RapSong))]
-    [XmlInclude(typeof(PopSong))]
     public class SongStoreList
     {
         private List<Song> songList = null;

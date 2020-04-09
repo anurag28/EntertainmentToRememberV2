@@ -59,6 +59,7 @@
         </TextBox>
         <TextBox x:Name="txtSinger" Grid.Row="1" Grid.Column="1" Margin="10" Height="40" Width="250"/>
         <ComboBox x:Name="cmbGenre" Grid.Row="2" Grid.Column="1" Margin="10" Height="40" Width="250" FontFamily="Bradley Hand ITC" FontSize="16" FontStyle="Oblique">
+            <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center" IsSelected="True">Choose Song Genre</ComboBoxItem>
             <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Rock</ComboBoxItem>
             <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Romantic</ComboBoxItem>
             <ComboBoxItem Foreground="DarkBlue" FontFamily="Bradley Hand ITC" FontSize="14" FontStyle="Oblique" HorizontalAlignment="Center">Trance</ComboBoxItem>

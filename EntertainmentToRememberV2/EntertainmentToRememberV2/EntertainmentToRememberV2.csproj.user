@@ -22,6 +22,9 @@
     <Compile Update="Pages\SearchMoviePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Pages\SearchShowPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Pages\SearchSongPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\SearchMoviePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\SearchShowPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Pages\SearchSongPage.xaml">

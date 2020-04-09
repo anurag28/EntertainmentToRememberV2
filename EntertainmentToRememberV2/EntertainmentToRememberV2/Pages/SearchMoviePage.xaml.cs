@@ -79,6 +79,11 @@ namespace EntertainmentToRememberV2.Pages
                 SearchByCastAndGenre(txtCast.Text, this.cmbGenre.SelectionBoxItem.ToString());
             }
 
+            else if(txtName.Text!="" && txtCast.Text!="" && cmbGenre.SelectedIndex != -1)
+            {
+                SearchByNameCastANdGenre(txtName.Text, txtCast.Text, this.cmbGenre.SelectionBoxItem.ToString());
+            }
+
             if (DisplayMovies.Count == 0)
             {
                 MessageBox.Show("No Results Found..");
@@ -162,6 +167,19 @@ namespace EntertainmentToRememberV2.Pages
             var query = from movie in movieList.MovieList
                         where movie.Cast.Contains(cast)
                         && movie.Genre.Contains(genre)
+                        select movie;
+            foreach (Movie movie in query)
+            {
+                DisplayMovies.Add(movie);
+            }
+        }
+
+        private void SearchByNameCastANdGenre(string name, string cast, string genre)
+        {
+            var query = from movie in movieList.MovieList
+                        where movie.Cast.Contains(cast) &&
+                         movie.Genre.Contains(genre)
+                        && movie.Name.Contains(name)
                         select movie;
             foreach (Movie movie in query)
             {

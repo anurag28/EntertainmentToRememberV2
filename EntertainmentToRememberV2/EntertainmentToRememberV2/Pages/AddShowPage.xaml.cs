@@ -36,7 +36,10 @@ namespace EntertainmentToRememberV2.Pages
         {
             InitializeComponent();
             enterShows = new List<Show>();
-            ReadFromFileShowsAndAddToCurrentList();
+            if (File.Exists("shows.xml"))
+            {
+                ReadFromFileShowsAndAddToCurrentList();
+            }
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -45,26 +48,26 @@ namespace EntertainmentToRememberV2.Pages
 
             switch (cmbGenre.SelectedIndex)
             {
-                case 0:
-                    newShow = new Show(txtName.Text,txtCast.Text,"Action", this.cmbGenre.SelectionBoxItem.ToString());
-                    break;
                 case 1:
-                    newShow = new Show(txtName.Text, txtCast.Text, "Drama", this.cmbGenre.SelectionBoxItem.ToString());
+                    newShow = new Show(txtName.Text,txtCast.Text,"Action", this.cmbRating.SelectionBoxItem.ToString());
                     break;
                 case 2:
-                    newShow = new Show(txtName.Text, txtCast.Text, "Thriller", this.cmbGenre.SelectionBoxItem.ToString());
+                    newShow = new Show(txtName.Text, txtCast.Text, "Drama", this.cmbRating.SelectionBoxItem.ToString());
                     break;
                 case 3:
-                    newShow = new Show(txtName.Text, txtCast.Text, "Romantic", this.cmbGenre.SelectionBoxItem.ToString());
+                    newShow = new Show(txtName.Text, txtCast.Text, "Thriller", this.cmbRating.SelectionBoxItem.ToString());
                     break;
                 case 4:
-                    newShow = new Show(txtName.Text, txtCast.Text, "Comedy", this.cmbGenre.SelectionBoxItem.ToString());
+                    newShow = new Show(txtName.Text, txtCast.Text, "Romantic", this.cmbRating.SelectionBoxItem.ToString());
                     break;
                 case 5:
-                    newShow = new Show(txtName.Text, txtCast.Text, "Sitcom", this.cmbGenre.SelectionBoxItem.ToString());
+                    newShow = new Show(txtName.Text, txtCast.Text, "Comedy", this.cmbRating.SelectionBoxItem.ToString());
                     break;
                 case 6:
-                    newShow = new Show(txtName.Text, txtCast.Text, "Sci-Fi", this.cmbGenre.SelectionBoxItem.ToString());
+                    newShow = new Show(txtName.Text, txtCast.Text, "Sitcom", this.cmbRating.SelectionBoxItem.ToString());
+                    break;
+                case 7:
+                    newShow = new Show(txtName.Text, txtCast.Text, "Sci-Fi", this.cmbRating.SelectionBoxItem.ToString());
                     break;
                 default:
                     MessageBox.Show("Invalid Genre Selected!!", "ERROR");
@@ -90,8 +93,8 @@ namespace EntertainmentToRememberV2.Pages
         {
             txtName.Text = string.Empty;
             txtCast.Text = string.Empty;
-            cmbGenre.SelectedIndex = -1;
-            cmbRating.SelectedIndex = -1;
+            cmbGenre.SelectedIndex = 0;
+            cmbRating.SelectedIndex = 0;
 
         }
 
@@ -123,7 +126,7 @@ namespace EntertainmentToRememberV2.Pages
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new SearchShowPage());
         }
 
         private void txtName_GotFocus(object sender, RoutedEventArgs e)

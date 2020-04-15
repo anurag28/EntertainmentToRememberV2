@@ -23,6 +23,7 @@ namespace EntertainmentToRememberV2.Pages
     /// </summary>
     public partial class SearchShowPage : Page
     {
+        List<Show> showToRecommend = new List<Show>();
 
         ShowStoreList showList = new ShowStoreList();
 
@@ -189,6 +190,40 @@ namespace EntertainmentToRememberV2.Pages
             {
                 DisplayShows.Add(show);
             }
+        }
+
+        private void btnRecommend_Click(object sender, RoutedEventArgs e)
+        {
+
+            foreach (Show show in grdDisplayShows.ItemsSource)
+            {
+                if (((CheckBox)chkRecommend.GetCellContent(show)).IsChecked == true)
+                {
+                    showToRecommend.Add(show);
+                }
+            }
+
+            if (showToRecommend.Count == 0)
+            {
+                MessageBox.Show("No Shows Are Selected To Recommend", "ERROR!!");
+            }
+
+            else
+            {
+
+                this.NavigationService.Navigate(new RecommendViaEmailPage(CreateMessageBody()));
+            }
+        }
+
+        private string CreateMessageBody()
+        {
+            string emailBody = "Hey friend,\n\n\nDon't forget to watch these amazing shows:\n";
+            foreach (Show show in showToRecommend)
+            {
+                emailBody = emailBody + "\n Name : " + show.Name + "      Genre : "
+                    + show.Genre + "        Cast: " + show.Cast + "     Rating: " + show.Rating;
+            }
+            return emailBody + "\n\n\nCheers!";
         }
     }
 }

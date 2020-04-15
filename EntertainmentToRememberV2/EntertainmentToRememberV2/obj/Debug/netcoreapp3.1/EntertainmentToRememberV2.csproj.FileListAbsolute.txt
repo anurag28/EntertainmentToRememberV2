@@ -29,3 +29,5 @@ C:\Users\Anurag\Desktop\Conestoga\SENG8050\Capstone_v2\EntertainmentToRememberV2
 C:\Users\Anurag\Desktop\Conestoga\SENG8050\Capstone_v2\EntertainmentToRememberV2\EntertainmentToRememberV2\obj\Debug\netcoreapp3.1\Pages\AddShowPage.baml
 C:\Users\Anurag\Desktop\Conestoga\SENG8050\Capstone_v2\EntertainmentToRememberV2\EntertainmentToRememberV2\obj\Debug\netcoreapp3.1\Pages\SearchShowPage.g.cs
 C:\Users\Anurag\Desktop\Conestoga\SENG8050\Capstone_v2\EntertainmentToRememberV2\EntertainmentToRememberV2\obj\Debug\netcoreapp3.1\Pages\SearchShowPage.baml
+C:\Users\Anurag\Desktop\Conestoga\SENG8050\Capstone_v2\EntertainmentToRememberV2\EntertainmentToRememberV2\obj\Debug\netcoreapp3.1\Pages\RecommendViaEmailPage.g.cs
+C:\Users\Anurag\Desktop\Conestoga\SENG8050\Capstone_v2\EntertainmentToRememberV2\EntertainmentToRememberV2\obj\Debug\netcoreapp3.1\Pages\RecommendViaEmailPage.baml

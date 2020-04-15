@@ -65,16 +65,18 @@
             </ComboBox>
             <Button x:Name="btnSearch" Grid.Row="4" Grid.Column="0"  Content="Search" Click="btnSearch_Click"/>
             <Button x:Name="btnHome" Grid.Row="4" Grid.Column="1"  Content="Home" Click="btnHome_Click"/>
+            <Button x:Name="btnRecommend" Grid.Row="4" Grid.Column="3"  Content="Recommend" Click="btnRecommend_Click"/>
             <DataGrid x:Name="grdDisplaySongs"
                   Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3"
-                  Grid.RowSpan="4" Margin="20" AutoGenerateColumns="False" FontWeight="ExtraBold"
+                  Grid.RowSpan="3" Margin="20" AutoGenerateColumns="False" FontWeight="ExtraBold"
                   FontFamily="Bradley Hand ITC" Foreground="DarkBlue" FontSize="16" Background="Transparent" BorderBrush="Transparent">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*" FontWeight="ExtraBold"/>
                     <DataGridTextColumn Header="Singer" Binding="{Binding Singer}" Width="*" FontWeight="ExtraBold"/>
                     <DataGridTextColumn Header="Genre" Binding="{Binding Genre}" Width="*" FontWeight="ExtraBold"/>
                     <DataGridTextColumn Header="Year" Binding="{Binding Year}" Width="*" FontWeight="ExtraBold"/>
-                </DataGrid.Columns>
+                    <DataGridCheckBoxColumn Header="Check" x:Name="chkRecommend" IsReadOnly="False" Width="*"/>
+            </DataGrid.Columns>
             </DataGrid>
         </Grid>
 </Page>

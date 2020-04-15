@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Anurag\Desktop\Conestoga\SENG8050\Capstone_v2\EntertainmentToRememberV2\EntertainmentToRememberV2\App.xaml
-8-1691446080
+944509640
 
-20-1502965880
+211697072770
 1921654412462
-MainWindow.xaml;Pages\AddMoviePage.xaml;Pages\AddShowPage.xaml;Pages\AddSongPage.xaml;Pages\HomePage.xaml;Pages\SearchMoviePage.xaml;Pages\SearchShowPage.xaml;Pages\SearchSongPage.xaml;
+MainWindow.xaml;Pages\AddMoviePage.xaml;Pages\AddShowPage.xaml;Pages\AddSongPage.xaml;Pages\HomePage.xaml;Pages\RecommendViaEmailPage.xaml;Pages\SearchMoviePage.xaml;Pages\SearchShowPage.xaml;Pages\SearchSongPage.xaml;
 
-False
+True
 

@@ -25,6 +25,8 @@ namespace EntertainmentToRememberV2.Pages
     {
         private ObservableCollection<Song> displaySongs = null;
 
+        List<Song> songToRecommend = new List<Song>();
+
         public ObservableCollection<Song> DisplaySongs 
         {
             get => displaySongs; 
@@ -200,5 +202,39 @@ namespace EntertainmentToRememberV2.Pages
         {
             this.NavigationService.Navigate(new HomePage());
         }
+
+        private void btnRecommend_Click(object sender, RoutedEventArgs e)
+        {
+            foreach(Song song in grdDisplaySongs.ItemsSource)
+            {
+                if(((CheckBox)chkRecommend.GetCellContent(song)).IsChecked == true){
+                    songToRecommend.Add(song);
+                }
+            }
+
+            if (songToRecommend.Count == 0)
+            {
+                MessageBox.Show("No Songs Are Selected To Recommend", "ERROR!!");
+            }
+
+            else
+            {
+                
+                this.NavigationService.Navigate(new RecommendViaEmailPage(CreateMessageBody()));
+            }
+        }
+
+        private string CreateMessageBody()
+        {
+            string emailBody="Hey friend,\n\n\nDon't forget to listen to these amazing songs:\n";
+            foreach (Song song in songToRecommend)
+            {
+                emailBody = emailBody + "\n Title : " + song.Title + "      Genre : "
+                    + song.Genre + "        Singer: " + song.Singer + "     Release Year: " + song.Year;
+            }
+            return emailBody+ "\n\n\nCheers!";
+        }
+
+
     }
 }

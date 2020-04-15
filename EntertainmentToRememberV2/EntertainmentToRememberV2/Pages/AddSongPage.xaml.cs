@@ -52,16 +52,16 @@ namespace EntertainmentToRememberV2.Pages
                     newSong = new Song(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
                     break;
                 case 2:
-                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
+                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Romantic", int.Parse(txtYear.Text));
                     break;
                 case 3:
-                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
+                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Trance", int.Parse(txtYear.Text));
                     break;
                 case 4:
-                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
+                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Rap", int.Parse(txtYear.Text));
                     break;
                 case 5:
-                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Rock", int.Parse(txtYear.Text));
+                    newSong = new Song(txtTitle.Text, txtSinger.Text, "Pop", int.Parse(txtYear.Text));
                     break;
                 default:
                     MessageBox.Show("Invalid Genre Selected!!", "ERROR");

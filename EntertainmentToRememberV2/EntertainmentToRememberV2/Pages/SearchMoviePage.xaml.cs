@@ -26,6 +26,8 @@ namespace EntertainmentToRememberV2.Pages
 
         MovieStoreList movieList = new MovieStoreList();
 
+        List<Movie> movieToRecommend = new List<Movie>();
+
         private ObservableCollection<Movie> displayMovies = null;
 
         public ObservableCollection<Movie> DisplayMovies
@@ -198,6 +200,40 @@ namespace EntertainmentToRememberV2.Pages
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HomePage());
+        }
+
+        private void btnRecommend_Click(object sender, RoutedEventArgs e)
+        {
+
+            foreach (Movie movie in grdDisplayMovies.ItemsSource)
+            {
+                if (((CheckBox)chkRecommend.GetCellContent(movie)).IsChecked == true)
+                {
+                    movieToRecommend.Add(movie);
+                }
+            }
+
+            if (movieToRecommend.Count == 0)
+            {
+                MessageBox.Show("No Movies Are Selected To Recommend", "ERROR!!");
+            }
+
+            else
+            {
+
+                this.NavigationService.Navigate(new RecommendViaEmailPage(CreateMessageBody()));
+            }
+        }
+
+        private string CreateMessageBody()
+        {
+            string emailBody = "Hey friend,\n\n\nDon't forget to watch these amazing movies:\n";
+            foreach (Movie movie in movieToRecommend)
+            {
+                emailBody = emailBody + "\n Name : " + movie.Name + "      Genre : "
+                    + movie.Genre + "        Cast: " + movie.Cast + "     Rating: " + movie.Rating+"\n";
+            }
+            return emailBody + "\n\nCheers!";
         }
     }
 }

@@ -31,5 +31,5 @@ namespace EntertainmentToRememberV2
         {
             _mainFrame.NavigationService.Navigate(new HomePage());
         }
-    }
+    }   
 }

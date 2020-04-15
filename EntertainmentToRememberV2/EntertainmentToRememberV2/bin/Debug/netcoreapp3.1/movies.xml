@@ -2,30 +2,6 @@
 <MovieList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Movies>
     <Movie>
-      <Name>mjj</Name>
-      <Cast>jbmn</Cast>
-      <Genre>Romantic</Genre>
-      <Rating>System.Windows.Controls.ComboBoxItem: 5</Rating>
-    </Movie>
-    <Movie>
-      <Name>mbmnbm</Name>
-      <Cast>mnbnmb,hjg,h</Cast>
-      <Genre>Action</Genre>
-      <Rating>System.Windows.Controls.ComboBoxItem: 1</Rating>
-    </Movie>
-    <Movie>
-      <Name>bdsbmndbnmb</Name>
-      <Cast>sjfbmn</Cast>
-      <Genre>Thriller</Genre>
-      <Rating>System.Windows.Controls.ComboBoxItem: 1</Rating>
-    </Movie>
-    <Movie>
-      <Name>mhghj</Name>
-      <Cast>lllllllllllllllllllllllllllllll</Cast>
-      <Genre>Thriller</Genre>
-      <Rating>System.Windows.Controls.ComboBoxItem: 1</Rating>
-    </Movie>
-    <Movie>
       <Name>new movie</Name>
       <Cast>akshay</Cast>
       <Genre>Comedy</Genre>
